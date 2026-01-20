@@ -1,27 +1,37 @@
-package Estudando_2026.Exercicio_de_Tesk.Tesk02.opcao1;
+package Estudando_2026.Exercicio_de_Tesk.Tesk02.opcao2falha;
 import java.util.Scanner;
 
-public class UsoMenu {
-     
-    
-    
+public class UsoMenuCorreto {
+
+        static String name = "";
+        static int age = 0;
+        static double salary = 0.0;
+
+
     static void comecar() {
 
-         Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         // Entrada de dados
         System.out.print("Qual seu nome? ");
-        String name = scanner.nextLine();
+        name = scanner.nextLine();
 
         System.out.print("Qual sua idade? ");
-        int age = scanner.nextInt();
+        age = scanner.nextInt();
 
         System.out.print("Qual seu salário mensal? ");
-        double salary = scanner.nextDouble();
+        salary = scanner.nextDouble();
+
+    }
+
+
+
+    static void menu() {
+
+        Scanner scanner = new Scanner(System.in);
 
         int opcao = 0;
 
-    
         while (opcao != 4) {
 
             System.out.println("\n===== MENU =====");
@@ -36,23 +46,17 @@ public class UsoMenu {
             switch (opcao) {
 
                 case 1:
-                    System.out.println("\n--- Dados Cadastrados ---");
-                    System.out.println("Nome: " + name);
-                    System.out.println("Idade: " + age);
-                    System.out.printf("Salário mensal: R$ %.2f%n", salary);
+                    mostrarDados();
                     break;
 
                 case 2:
-                    double salarioAnual = salary * 12;
+                    double salarioAnual = calcularSalarioAnual();
                     System.out.printf("\nSalário anual: R$ %.2f%n", salarioAnual);
                     break;
 
                 case 3:
-                    if (age >= 18) {
-                        System.out.println("\nVocê é maior de idade.");
-                    } else {
-                        System.out.println("\nVocê é menor de idade.");
-                    }
+                    boolean maiorDeIdade = isMaiorDeIdade(age);
+                    System.out.println("\nMaior de idade: " + (maiorDeIdade ? "Sim" : "Não"));
                     break;
 
                 case 4:
@@ -61,11 +65,39 @@ public class UsoMenu {
 
                 default:
                     System.out.println("\nOpção inválida. Tente novamente.");
+                    break;
+
             }
+
         }
 
-        scanner.close();
+
+
+        }
+
+
+        static void mostrarDados() {
+            System.out.println("\n--- Dados Cadastrados ---");
+            System.out.println("Nome: " + name);
+            System.out.println("Idade: " + age);
+            System.out.printf("Salário mensal: R$ %.2f%n", salary);
+
+
     }
-}
-       
+
+
+    static double calcularSalarioAnual() {
+        return salary * 12;
+
+        }
+
+         static boolean isMaiorDeIdade(int idade) {
+        return idade >= 18;
     
+    }
+
+}
+
+    
+
+
