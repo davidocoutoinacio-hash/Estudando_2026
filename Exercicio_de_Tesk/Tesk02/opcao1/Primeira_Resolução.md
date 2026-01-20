@@ -1,0 +1,1 @@
+Uma maneira preguiçosa mas que cumpre com o objetivo da Tesk, fazendo o menu se tornar um metodo e deixando a Classe Main o mais vazia possivel.
