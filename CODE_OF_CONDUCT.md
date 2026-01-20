@@ -1,10 +1,10 @@
 # 📜 Código de Conduta
 
-## Nosso Compromisso
+## Compromisso
 
-No interesse de promover um ambiente aberto e acolhedor, nós, como contribuidores e mantenedores, nos comprometemos a tornar a participação em nosso projeto e comunidade uma experiência livre de assédio para todos.
+No interesse de promover um ambiente aberto e acolhedor, como contribuidor e mantenedor, me comprometo a tornar a participação em meus projetos e comunidade uma experiência livre de assédio para todos.
 
-## Nossos Padrões
+## Padrões
 
 Exemplos de comportamento que contribuem para criar um ambiente positivo incluem:
 
@@ -22,9 +22,9 @@ Exemplos de comportamento inaceitável incluem:
 - ❌ Publicar informações privadas de outros sem permissão explícita
 - ❌ Outras condutas que possam ser consideradas inadequadas em um ambiente profissional
 
-## Nossas Responsabilidades
+## Responsabilidades
 
-Os mantenedores do projeto são responsáveis por esclarecer os padrões de comportamento aceitável e devem tomar ações corretivas apropriadas e justas em resposta a qualquer instância de comportamento inaceitável.
+O mantenedor do projeto são responsáveis por esclarecer os padrões de comportamento aceitável e devem tomar ações corretivas apropriadas e justas em resposta a qualquer instância de comportamento inaceitável.
 
 ## Escopo
 
