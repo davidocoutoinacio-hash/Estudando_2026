@@ -1,4 +1,4 @@
-package Estudando_2026.Array_ArrayList;
+package Estudando_2026.Conteudos.Array_ArrayList;
 
 import java.util.Arrays;
 

@@ -1,0 +1,1 @@
+Tentativa de entender e conseguir vizualizar a lógica do uso de repetição com for while e do-while, no começo só vizualizava como uma forma de exibir numeros sequenciais, mas entendi que serve para dar controle ao fluxo da aplicação.
