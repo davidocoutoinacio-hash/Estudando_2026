@@ -21,6 +21,24 @@
 
 Este repositório contém meus estudos, projetos práticos e experimentos com diversas tecnologias durante o ano de 2026. Aqui você encontrará exemplos de código, projetos completos e anotações sobre diferentes áreas da programação.
 
+
+### 🎯 Fundamentoe
+
+- 💡 Finalidade;
+
+ Resolvi testar o uso do ChatGPT como instrutor, utilizando uma simulação de tasks para aprender Java. Ando acompanhando vídeos dinâmicos de professores e consumindo conteúdos abertos no YouTube e em plataformas de cursos como a DIO, além de estar lendo a documentação oficial do Java.
+
+Também venho estudando conteúdos relacionados a diversas tecnologias essenciais para a formação de um bom programador, como frameworks, fundamentos, princípios, metodologias e arquiteturas, além de analisar exemplos reais de acertos e erros disponíveis na internet.
+
+Busco aprender o uso da linguagem de forma sólida e consciente, sem ignorar as mudanças significativas trazidas pela IA no ambiente da programação. Ao mesmo tempo, mantenho atenção a aspectos críticos como segurança, vulnerabilidades, escalabilidade e o risco de complexidade desnecessária.
+
+Cada problema deve ser resolvido com os recursos adequados ao seu contexto, a partir de uma avaliação lógica que determine o nível de complexidade realmente necessário para a solução.
+
+Ignorar as transformações atuais e deixar de utilizar uma ferramenta que vem se tornando cada vez mais relevante seria um erro, assim como seria um equívoco grave desconsiderar que conhecimento, estudo e entendimento próprios são indispensáveis para o uso responsável e eficaz dessas ferramentas.
+
+Sistemas e códigos bem estruturados e escritos devem ser sempre o objetivo final, independentemente de quem os desenvolveu ou das ferramentas utilizadas em sua construção.
+
+
 ### 🎯 Objetivos
 
 - 🔥 Aprimorar conhecimentos em desenvolvimento
