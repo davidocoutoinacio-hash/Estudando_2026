@@ -22,7 +22,7 @@
 Este repositório contém meus estudos, projetos práticos e experimentos com diversas tecnologias durante o ano de 2026. Aqui você encontrará exemplos de código, projetos completos e anotações sobre diferentes áreas da programação.
 
 
-### 🎯 Fundamentoe
+### 🎯 Fundamento
 
 - 💡 Finalidade;
 
