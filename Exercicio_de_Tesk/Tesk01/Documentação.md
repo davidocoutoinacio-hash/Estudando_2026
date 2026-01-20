@@ -1,0 +1,3 @@
+
+
+Fiz duas opções, depois passei o codigo no ChatGPT que nesse meu projeto de estudo atua como "Cliente" e depois Revisor, após enviar meu codigo passei todas as correções necessarias para que o codigo funcionasse da forma que a Tesk solicitava, após isso implementei Try and Catch para tratar os possiveis erros de digitação que poderia acontecer do lado do usuário para que a aplicação não finalizasse ao digitar uma letra onde o programa espera um número, mas por fim, a Tesk passou na avaliação.
