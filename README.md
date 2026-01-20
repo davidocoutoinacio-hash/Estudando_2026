@@ -105,8 +105,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 **Seu Nome**
 
-- GitHub: [@seu-usuario](https://github.com/davidocoutoinacio-hash)
-- LinkedIn: [Seu Perfil](www.linkedin.com/in/davi-inacio-685297363)
+- GitHub: [Davi](https://github.com/davidocoutoinacio-hash)
+- LinkedIn: [Entra](www.linkedin.com/in/davi-inacio-685297363)
 
 ## ⭐ Mostre seu apoio
 
