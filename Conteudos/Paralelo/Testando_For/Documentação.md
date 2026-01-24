@@ -1,0 +1,1 @@
+Experiemtnando o uso de while e for, implemento de Try and Catch para timer em codigo.
