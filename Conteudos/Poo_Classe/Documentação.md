@@ -1,0 +1,1 @@
+Nessa aula vi um pouco mais sobre Classes, Orientação a Objeto e a diferença do formato prosedural.
