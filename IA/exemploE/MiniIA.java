@@ -1,3 +1,6 @@
+package Estudando_2026.IA.exemploE;
+
+
 public class MiniIA {
     public static void main(String[] args) {
         // Dados de treino (Porta Lógica AND)
