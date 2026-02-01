@@ -1,33 +1,27 @@
 package Estudando_2026.IA.exemploE;
 
 
-
-import java.util.*;
 import java.time.LocalDateTime;
-
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 
 public class IA {
-
-    /* =========================
-       1. ESTADO DA IA
-       ========================= */
 
     private String nome;
     private boolean ativa = true;
 
     // Memória
     private List<String> memoriaCurta;
-    private Map<String, String> memoriaLonga;
+    private Map<String, String> memoriaLonga; // conhecimento aprendido
 
     // Regras
     private List<Regra> regras;
 
-    // Histórico
+    // Log
     private List<String> logExecucao;
-
-    /* =========================
-       2. CONSTRUTOR
-       ========================= */
 
     public IA(String nome) {
         this.nome = nome;
@@ -41,13 +35,14 @@ public class IA {
     }
 
     /* =========================
-       3. CICLO DE VIDA
+       CICLO PRINCIPAL
        ========================= */
 
     public void iniciar() {
+        Scanner scanner = new Scanner(System.in);
         log("IA iniciada");
 
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("IA pronta. Digite 'ensinar' para ensinar ou 'sair' para encerrar.");
 
         while (ativa) {
             System.out.print("\nEntrada > ");
@@ -58,10 +53,14 @@ public class IA {
                 break;
             }
 
+            if (entrada.equalsIgnoreCase("ensinar")) {
+                modoEnsino(scanner);
+                continue;
+            }
+
             perceber(entrada);
-            String decisao = decidir();
+            String decisao = decidir(entrada);
             agir(decisao);
-            aprender(entrada, decisao);
         }
     }
 
@@ -72,84 +71,98 @@ public class IA {
     }
 
     /* =========================
-       4. PERCEPÇÃO
+       MODO DE ENSINO
+       ========================= */
+
+    private void modoEnsino(Scanner scanner) {
+        System.out.print("Qual é a entrada que deseja ensinar? > ");
+        String entrada = scanner.nextLine();
+
+        System.out.print("Qual deve ser a resposta da IA? > ");
+        String resposta = scanner.nextLine();
+
+        memoriaLonga.put(normalizar(entrada), resposta);
+        log("Novo conhecimento ensinado: " + entrada);
+
+        System.out.println("✔ Aprendido com sucesso!");
+    }
+
+    /* =========================
+       PERCEPÇÃO
        ========================= */
 
     private void perceber(String entrada) {
         memoriaCurta.add(entrada);
-        log("Percepção registrada: " + entrada);
+        log("Percepção: " + entrada);
     }
 
     /* =========================
-       5. DECISÃO
+       DECISÃO
        ========================= */
 
-    private String decidir() {
-        String ultimaEntrada = memoriaCurta.get(memoriaCurta.size() - 1);
+    private String decidir(String entrada) {
+        String chave = normalizar(entrada);
 
+        // 1️⃣ Prioridade: conhecimento ensinado
+        if (memoriaLonga.containsKey(chave)) {
+            log("Conhecimento aprendido utilizado");
+            return memoriaLonga.get(chave);
+        }
+
+        // 2️⃣ Regras fixas
         for (Regra regra : regras) {
-            if (regra.aplica(ultimaEntrada)) {
+            if (regra.aplica(entrada)) {
                 log("Regra aplicada: " + regra.nome);
-                return regra.executar(ultimaEntrada);
+                return regra.executar(entrada);
             }
         }
 
-        return "Não sei como responder a isso ainda.";
+        // 3️⃣ Fallback
+        return "Ainda não sei responder isso. Você pode me ensinar digitando 'ensinar'.";
     }
 
     /* =========================
-       6. AÇÃO
+       AÇÃO
        ========================= */
 
     private void agir(String resposta) {
         System.out.println("IA > " + resposta);
-        log("Resposta emitida: " + resposta);
+        log("Resposta: " + resposta);
     }
 
     /* =========================
-       7. APRENDIZADO
-       ========================= */
-
-    private void aprender(String entrada, String resposta) {
-        memoriaLonga.put(entrada, resposta);
-        log("Aprendizado armazenado");
-    }
-
-    /* =========================
-       8. REGRAS
+       REGRAS INICIAIS
        ========================= */
 
     private void inicializarRegras() {
 
         regras.add(new Regra(
                 "Saudação",
-                entrada -> entrada.toLowerCase().contains("oi") || entrada.toLowerCase().contains("olá"),
-                entrada -> "Olá! Como posso ajudar?"
+                e -> e.toLowerCase().contains("oi") || e.toLowerCase().contains("olá"),
+                e -> "Olá! 😄"
         ));
 
         regras.add(new Regra(
-                "Pergunta Nome",
-                entrada -> entrada.toLowerCase().contains("seu nome"),
-                entrada -> "Meu nome é " + nome
-        ));
-
-        regras.add(new Regra(
-                "Memória Longa",
-                entrada -> memoriaLonga.containsKey(entrada),
-                entrada -> "Você já disse isso antes. Minha resposta foi: " + memoriaLonga.get(entrada)
+                "Nome",
+                e -> e.toLowerCase().contains("seu nome"),
+                e -> "Meu nome é " + nome
         ));
     }
 
     /* =========================
-       9. LOG
+       UTILITÁRIOS
        ========================= */
+
+    private String normalizar(String texto) {
+        return texto.trim().toLowerCase();
+    }
 
     private void log(String evento) {
         logExecucao.add(LocalDateTime.now() + " - " + evento);
     }
 
     /* =========================
-       10. CLASSES INTERNAS
+       CLASSES INTERNAS
        ========================= */
 
     private static class Regra {
@@ -183,7 +196,7 @@ public class IA {
     }
 
     /* =========================
-       11. MAIN
+       MAIN
        ========================= */
 
     public static void main(String[] args) {
