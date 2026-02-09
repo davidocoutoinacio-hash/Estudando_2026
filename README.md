@@ -61,11 +61,9 @@ Tecnologias e ferramentas que estou estudando:
 
 ```
 Estudando_2026/
-├── projetos/          # Projetos completos
-├── exercicios/        # Exercícios e desafios
-├── anotacoes/         # Anotações e resumos
-├── recursos/          # Recursos úteis e referências
-└── docs/              # Documentação adicional
+├── Conteudos/          # Estudos realizados
+├── Exercicios_de_Tesk/    # Exercicios simulados para entender a forma de trabalhar com tesks
+└── IA/              # Estudando estrutura de IA em java
 ```
 
 ## 🚀 Começar
