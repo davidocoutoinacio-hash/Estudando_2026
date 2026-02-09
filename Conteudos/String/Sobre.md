@@ -1,0 +1,1 @@
+Hoje a aula foi sobre Strings, aprendi sobre como manipular, subistituir, concatenar ou ter retorno de letras de uma String, logica base para muitos aplicativos de manipulação de texto.
